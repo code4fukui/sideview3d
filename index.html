@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>sideview3d</title>
+</head><body>
+<h1><span>sideview3d</span><span>sideview3d</span></h1>
+<div class="video2">
+<video id="videol" src="./IMG_5526.mp4" width=610 height=343 muted loop></video><video id="videor" src="./IMG_5526.mp4" width=610 height=343 muted loop></video><br>
+</div>
+<input type=range id="rangedif" min=-1 value=.10 max=1 step=0.01><br><span id="spandif"></span>
+
+<hr>
+<a href=https://github.com/code4fukui/sideview3d>src on GitHub</a>
+
+<script type="module">
+onload = () => {
+  videol.currentTime = 0;
+  videor.currentTime = rangedif.value;
+  videol.play();
+  videor.play();
+};
+rangedif.oninput = () => {
+  const dif = parseFloat(rangedif.value);
+  if (dif < 0) {
+    videor.currentTime = videol.currentTime + dif;
+  } else {
+    videol.currentTime = videor.currentTime + dif;
+  }
+  spandif.textContent = (dif >= 0 ? "+" : "") + dif.toFixed(2) + "sec";
+};
+rangedif.oninput();
+
+</script>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1 {
+  white-space: nowrap;
+}
+h1 > span {
+  width: 50vw;
+  display: inline-block;
+}
+video {
+  margin: 0;
+  padding: 0;
+  width: 50vw;
+}
+.video2 {
+  white-space: nowrap;
+}
+#rangedif {
+  width: 90vw;
+}
+</style>
