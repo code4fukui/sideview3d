@@ -1,18 +1,21 @@
 # sideview3d
-日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-A simple web-based side-by-side video viewer.
+A Web/Code project by [Code for FUKUI](https://github.com/code4fukui).
 
-## Demo
-You can view the demo at the [GitHub repository](https://code4fukui.github.io/sideview3d/).
+**Live demo**: https://code4fukui.github.io/sideview3d/
 
-## Features
-- Displays two videos side-by-side
-- Allows adjusting the time difference between the two videos using a slider
+## Technology Stack
 
-## Usage
-1. Open the `index.html` file in a web browser.
-2. Adjust the time difference between the two videos using the slider.
+
+## Installation & Setup
+
+No build step required. Clone the repository and open `index.html` in a browser,
+or visit the live demo at https://code4fukui.github.io/sideview3d/
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
+MIT License. See [LICENSE](./LICENSE) for details.
